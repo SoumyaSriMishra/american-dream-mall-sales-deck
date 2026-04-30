@@ -10,7 +10,7 @@ export const mediaAssets = {
     entertainmentNickelodeon: '/nickelodeon-bg.mp4',
   },
   sections: {
-    aboutOverview: 'https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=1200&q=85',
+    aboutOverview: '/destination.jpg',
     retailExperience: '/retail_brand_pic1.png',
     retailShowcase: '/retail_brand_pic2.png',
     luxuryPolaroidWall: 'https://images.unsplash.com/photo-1551882547-ff40c63fe2fa?w=1600&q=90',
