@@ -6,7 +6,7 @@ import CardThrowTransition from '../transitions/CardThrowTransition';
 
 interface Slide {
   id: string;
-  component: React.ComponentType;
+  component: React.ComponentType<any>;
   title: string;
 }
 
@@ -72,19 +72,6 @@ export default function DigideckContainer({ slides }: DigideckContainerProps) {
     setSidebarOpen(false);
   };
 
-  const nextSlide = () => {
-    if (isCardThrowActive) return;
-    if (currentSlide < slides.length - 1) {
-      setCurrentSlide(currentSlide + 1);
-    }
-  };
-
-  const prevSlide = () => {
-    if (isCardThrowActive) return;
-    if (currentSlide > 0) {
-      setCurrentSlide(currentSlide - 1);
-    }
-  };
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -130,11 +117,6 @@ export default function DigideckContainer({ slides }: DigideckContainerProps) {
     }
   };
 
-  const [direction, setDirection] = useState(0);
-
-  useEffect(() => {
-    setDirection(0);
-  }, [currentSlide]);
 
   const handleSlideChange = (newIndex: number, e?: React.MouseEvent) => {
     if (e) {
@@ -149,7 +131,6 @@ export default function DigideckContainer({ slides }: DigideckContainerProps) {
       return;
     }
     
-    setDirection(newIndex > currentSlide ? 1 : -1);
     setCurrentSlide(newIndex);
   };
 
@@ -262,7 +243,6 @@ export default function DigideckContainer({ slides }: DigideckContainerProps) {
                   (currentSlide === 0 ? 
                     (slides[0].component as any)({ goToSlide, currentSlide }) :
                     <CurrentSlideComponent 
-                      isActive={true}
                       {...(currentSlide === 7 ? { snapshotRef: sponsorshipSnapshotRef } : {})} 
                     />
                   )

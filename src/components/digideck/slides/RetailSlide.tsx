@@ -15,9 +15,6 @@ export default function RetailSlide() {
     bar.classList.remove('live-pulse');
 
     // Phase 2: Explosion on click → letters scatter
-    const rect = bar.getBoundingClientRect();
-
-
     const letters = document.querySelectorAll('.live-letter');
     letters.forEach((letter, index) => {
       const lRect = letter.getBoundingClientRect();

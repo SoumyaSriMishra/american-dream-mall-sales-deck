@@ -13,18 +13,6 @@ import { mediaAssets } from '../../../data/mediaAssets';
 // Phase 5: Video fully revealed, shards removed (1500ms+)
 // Reset: on panel re-entry, canvas refills and hammer reappears
 
-// --- Delaunay Triangulation Utility ---
-function circumcircle(a: any, b: any, c: any) {
-  const ax = a.x, ay = a.y;
-  const bx = b.x, by = b.y;
-  const cx = c.x, cy = c.y;
-  const d = 2 * (ax * (by - cy) + bx * (cy - ay) + cx * (ay - by));
-  if (d === 0) return { cx: 0, cy: 0, r: 0 };
-  const ux = ((ax * ax + ay * ay) * (by - cy) + (bx * bx + by * by) * (cy - ay) + (cx * cx + cy * cy) * (ay - by)) / d;
-  const uy = ((ax * ax + ay * ay) * (cx - bx) + (bx * bx + by * by) * (ax - cx) + (cx * cx + cy * cy) * (bx - ax)) / d;
-  const r = Math.sqrt((ax - ux) ** 2 + (ay - uy) ** 2);
-  return { cx: ux, cy: uy, r };
-}
 
 function inCircumcircle(p: any, a: any, b: any, c: any) {
   const ax = a.x - p.x, ay = a.y - p.y;
@@ -260,9 +248,6 @@ export default function EntertainmentSlide() {
       hammer.style.transition = 'transform 180ms cubic-bezier(0.55, 0, 1, 0.45)';
       
       const panelRect = panel.getBoundingClientRect();
-      const strikeCenterX = panelRect.width / 2;
-      const strikeCenterY = panelRect.height / 2;
-      
       hammer.style.transform = `translate(-38vw, 35vh) rotate(45deg)`;
       
       allTimeouts.current.push(window.setTimeout(() => {
