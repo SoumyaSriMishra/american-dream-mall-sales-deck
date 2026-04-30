@@ -11,8 +11,8 @@ export const mediaAssets = {
   },
   sections: {
     aboutOverview: 'https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=1200&q=85',
-    retailExperience: '/retail-image1.png',
-    retailShowcase: '/retail-image2.png',
+    retailExperience: '/retail_brand_pic1.png',
+    retailShowcase: '/retail_brand_pic2.png',
     luxuryPolaroidWall: 'https://images.unsplash.com/photo-1551882547-ff40c63fe2fa?w=1600&q=90',
     culinaryConveyorHero: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=85',
     sponsorshipActivation: 'https://images.unsplash.com/photo-1556761175-4b46a572b786?w=1200&q=85',
