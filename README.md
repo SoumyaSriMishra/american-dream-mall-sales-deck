@@ -1,6 +1,23 @@
 # American Dream Mall - Interactive Sales Deck
 
+> [!IMPORTANT]
+> **DESKTOP OPTIMIZED**: This is a cinematic deck presentation designed and optimized for high-resolution desktop viewing. It uses complex particle systems and horizontal scrolling interactions best experienced on a laptop or desktop monitor.
+
 A world-class interactive sales tool showcasing American Dream Mall - one of North America's premier entertainment and retail destinations. Built as a Digideck presentation platform for high-stakes commercial sales.
+
+## ✨ Magical Interactions
+
+The deck features a series of **special golden hover buttons** designed to unlock the "magical views" of the Dream Mall. Look out for these interactive triggers on each page:
+
+- **Skip Now**: Seamlessly transition from the cinematic intro to the main deck.
+- **View on Google Maps**: Explore the strategic location in the New Jersey/NYC hub.
+- **Live Exposure**: (Retail Slide) Trigger a magical letter explosion to reveal the impact of live retail.
+- **Explore the Menu**: (Dining Slide) Start the animated conveyor belt with the moving steam-engine train.
+- **View the World**: (Luxury Slide) Launch the Polaroid wall gallery of global luxury hotel partners.
+- **Wipe Out to Live the Moment**: (Entertainment Slide) Interact with major attractions and venues.
+- **Want to be Attracted**: (Sponsorship Slide) Discover partnership and activation tiers.
+- **Visit Website**: Direct connection to live mall resources.
+- **Navigation ( > )**: Smoothly transition between chapters of the mall's story.
 
 ## Overview
 

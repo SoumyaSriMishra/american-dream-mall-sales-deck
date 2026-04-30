@@ -3,9 +3,13 @@ import { fadeUp, fadeIn, staggerContainer } from '../../../lib/animations';
 import { sponsorshipTiers } from '../../../data/mallData';
 import { mediaAssets } from '../../../data/mediaAssets';
 
-export default function SponsorshipSlide() {
+interface SponsorshipSlideProps {
+  snapshotRef?: React.RefObject<HTMLDivElement>;
+}
+
+export default function SponsorshipSlide({ snapshotRef }: SponsorshipSlideProps) {
   return (
-    <div className="relative w-full h-screen bg-parchment overflow-hidden">
+    <div ref={snapshotRef} className="relative w-full h-screen bg-parchment overflow-hidden">
       <div className="h-full flex items-center px-4 sm:px-6 lg:px-8">
         <div className="w-full max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-8">
@@ -18,11 +22,14 @@ export default function SponsorshipSlide() {
                 animate="visible"
                 variants={fadeUp}
               >
-                <img 
-                  src={mediaAssets.sections.sponsorshipHero} 
-                  alt="Sponsorship Audience"
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
+                <div className="absolute inset-0">
+                  <motion.img 
+                    src={mediaAssets.sections.sponsorshipActivation} 
+                    alt="Sponsorship Audience"
+                    className="w-full h-full object-cover"
+                    layoutId="main-image"
+                  />
+                </div>
                 <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4" style={{
                   background: 'linear-gradient(to top, rgba(28,27,25,0.9) 0%, transparent 100%)'
                 }}>
@@ -58,12 +65,13 @@ export default function SponsorshipSlide() {
                 animate="visible"
               >
                 <motion.div className="mb-4" variants={fadeIn}>
-                  <h2 
+                  <motion.h2 
                     className="font-display font-light text-charcoal leading-[1.1] mb-3" 
                     style={{ fontSize: 'clamp(1.25rem, 3.5vw, 2.5rem)' }}
+                    layoutId="heading"
                   >
                     Partnership<br />Opportunities
-                  </h2>
+                  </motion.h2>
                 </motion.div>
 
                 <div className="space-y-0">
@@ -95,7 +103,7 @@ export default function SponsorshipSlide() {
                   variants={fadeUp}
                   transition={{ delay: 0.5 }}
                 >
-                  Schedule a Partnership Call
+                  Want to be Attracted?
                 </motion.a>
               </motion.div>
             </div>
